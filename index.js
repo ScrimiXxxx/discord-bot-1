@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { fstat } = require('fs');
 const bot = new Discord.Client({ intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "DIRECT_MESSAGES", "GUILD_BANS", ]})
-const config = require("./token.json")
+const token = require("./token.json")
 
 bot.on('ready', async () =>{
     console.log("le bot est prêt")
@@ -84,4 +84,4 @@ bot.on('message', async (message) => {
     }
   });
 
-bot.login("OTI3MTExNjAwNDA0NTYxOTUw.YdFd9g.jHcyS6_rsyk0zVg_kkjWVmhtxbY");
+bot.login(token.token);
